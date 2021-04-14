@@ -1,7 +1,14 @@
 {
   "name": "@vas-dev/units",
   "version": "0.0.1",
-  "author": "Marcelo Alves",
+  "author": "Marcelo Alves <marcelo.alves@vas.com>",
+  "description": "Small wrapper to help with unit conversions",
+  "keywords": [
+    "js-quantities",
+    "units",
+    "imperial",
+    "metric"
+  ],
   "license": "MIT",
   "source": "src/index.ts",
   "main": "dist/index.js",
