@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { UnitObject } from '../types'
 import * as Operations from './arithmetic'
 
@@ -27,6 +28,7 @@ describe('Arithmetic Functions', () => {
   ])(`%s`, (_name, operation, argument, expectedString) => {
     it('should call `base` operation with the correct arguments', () => {
       const spy = jest.spyOn(Operations, 'base')
+      // @ts-ignore
       Operations[operation]([left, right], { maxDecimals: 2 })
 
       expect(spy).toHaveBeenCalled()
@@ -35,9 +37,10 @@ describe('Arithmetic Functions', () => {
 
     it('should format correctly', () => {
       const spy = jest.spyOn(Operations, 'base')
+      // @ts-ignore
       const result = Operations[operation]([left, right], {
         maxDecimals: 2,
-        formatter: (value, unit) => `${value} ${unit}`,
+        formatter: (value: number, unit: string) => `${value} ${unit}`,
       })
 
       expect(spy).toHaveBeenCalled()
