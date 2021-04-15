@@ -6,7 +6,7 @@ export const base = (
   operation: 'add' | 'sub' | 'mul' | 'div',
   left: UnitObject,
   right: UnitObject,
-  maxDecimals: number = 0,
+  maxDecimals = 0,
   formatter?: Formatter
 ) => {
   const result = Qty(left.value, left.unit)

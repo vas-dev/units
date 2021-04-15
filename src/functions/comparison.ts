@@ -1,5 +1,5 @@
 import Qty from 'js-quantities'
-import { UnitObject, Units } from '../types'
+import { UnitObject } from '../types'
 
 type CompareOperations = 'eq' | 'same' | 'lt' | 'lte' | 'gt' | 'gte' | 'compareTo'
 
