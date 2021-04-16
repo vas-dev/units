@@ -1,6 +1,6 @@
 {
   "name": "@vas-dev/units",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Marcelo Alves <marcelo.alves@vas.com>",
   "description": "Small wrapper to help with unit conversions",
   "keywords": [
