@@ -1,6 +1,6 @@
 {
   "name": "@vas-dev/units",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "author": "Marcelo Alves <marcelo.alves@vas.com>",
   "description": "Small wrapper to help with unit conversions",
   "keywords": [
@@ -9,6 +9,13 @@
     "imperial",
     "metric"
   ],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/vas-dev/units.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "license": "MIT",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -21,7 +28,9 @@
     "build": "microbundle src/index.ts",
     "test": "jest",
     "lint": "eslint src/**/*.ts",
-    "lint:staged": "pretty-quick src/**/*.ts"
+    "lint:staged": "pretty-quick src/**/*.ts",
+    "prerelease": "yarn test --no-cache && yarn build",
+    "release": "changeset publish"
   },
   "prettier": {
     "semi": false,
@@ -29,6 +38,8 @@
     "singleQuote": true
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.4.0",
+    "@changesets/cli": "^2.16.0",
     "@types/jest": "^26.0.22",
     "@types/js-quantities": "^1.6.2",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
