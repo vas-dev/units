@@ -8,6 +8,7 @@ jobs:
   code_lint:
     name: Code Lint
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     env:
       CI: true
     steps:
